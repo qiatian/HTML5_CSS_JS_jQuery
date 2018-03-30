@@ -1,0 +1,139 @@
+blockquote, body, button, dd, dl, dt, fieldset, form, h1, h2,
+h3, h4, h5, h6, hr, input, legend, li, ol, p, pre, td, textarea,
+th, ul,var{
+    padding: 0;
+    margin: 0;
+}
+a{
+    /*去除下划线*/
+    text-decoration: none;
+    font-size: 13px;
+    color: darkgray;
+}
+body{
+    background: url("../imgs/bg.png") no-repeat;
+    background-size: cover;
+
+    /*水平居中*/
+    text-align: center;
+}
+/*面板*/
+#pannel{
+    background-color: white;
+    /*改变标签类型*/
+    display: inline-block;
+
+    /*重写*/
+    text-align: left;
+
+    margin-top: 100px;
+
+    /*设置面板内边距*/
+    padding: 20px;
+
+    /*设置圆角*/
+    border-radius: 5px;
+
+    /*设置块阴影*/
+    box-shadow: -10px 10px 20px;
+}
+/*面板的头部*/
+#panel-header{
+    text-align: center;
+    margin-bottom: 15px;
+}
+#panel-header h2{
+    font-size: 22px;
+    /*内边距*/
+    padding-bottom: 5px;
+    border-bottom: 1px solid #dddddd;
+}
+/*面板的中间内容*/
+#panel-content{
+
+
+}
+.user-peo{
+    background-color: red;
+    margin-bottom: 15px;
+    height: 35px;
+}
+.user-pwd{
+    /*background-color: rebeccapurple;*/
+    height: 35px;
+    margin-bottom: 15px;
+
+    position: relative;
+
+}
+.user-pwd img{
+    position: absolute;
+    left: 5px;
+    top: 10px;
+
+}
+.user-pwd input{
+    width: 100%;
+    box-sizing: border-box;
+    height: 100%;
+
+    padding-left: 50px;
+
+    /*设置圆角*/
+    border-radius: 5px;
+
+    /*解决阴影 设置边框*/
+    border: 1px solid #dddddd;
+
+}
+.user-pwd input:focus{
+    outline: none;
+    /*改变边框的颜色*/
+    border-color: orange;
+    /*外发光阴影*/
+    box-shadow: 0 0 10px orange;
+}
+/*一些设置*/
+#setting{
+    margin-bottom: 15px;
+}
+.forget-pwd{
+    float: right;
+}
+/*登陆按钮*/
+#btn{
+    width: 100%;
+    height: 35px;
+    border: 0;
+    background-color: orange;
+    border-radius: 5px;
+    color: white;
+    font-size: 16px;
+}
+#btn:focus{
+    outline: none;
+}
+/*注册新账号*/
+#reg{
+    /*居中*/
+    text-align: center;
+    margin: 10px 0;
+    font-size: 13px;
+}
+#reg a{
+    color: red;
+}
+
+/*面板的尾部*/
+#panel-footer{
+    /*background-color: red;*/
+
+
+}
+#panel-footer img{
+    width: 30px;
+    height: 30px;
+
+    /*图片垂直居中*/
+    vertical-align: middle;
+}

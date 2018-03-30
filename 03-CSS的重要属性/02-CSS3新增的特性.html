@@ -1,0 +1,63 @@
+<!--标准流 上下，左右；脱离标准流：float属性-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>新增特性</title>
+    <!--rgba透明度；块阴影与圆角阴影 边框图片 形变动画-->
+    <style>
+        div{
+            background-color: red;
+            width: 200px;
+            height: 60px;
+            /*外边距*/
+            margin: 50px;
+            /*内边距*/
+            padding: 10px;
+            /*设置盒子阴影*/
+            box-shadow: 10px 5px 10px green;
+            /*设置圆角*/
+            /*border-radius: 100px;*/
+            border-top-left-radius: 50px;
+            border-bottom-right-radius: 50px;
+
+        }
+        .test1{
+            background-color: rgba(255,0,0,1.0);
+        }
+        .test2{
+            background-color: rgba(255,0,0,0.8);
+        }
+        .test3{
+            background-color: rgba(255,0,0,0.6);
+        }
+        .test4{
+            background-color: rgba(255,0,0,0.4);
+        }
+        .test5{
+            background-color: rgba(255,0,0,0.2);
+        }
+        .test6{
+            background-color: rgba(255,0,0,0.1);
+        }
+        p{
+            font-size: 50px;
+            color: red;
+            /*设置文字阴影*/
+            text-shadow: 10px -5px 10px purple;
+
+        }
+    </style>
+</head>
+<body>
+  <div class="test1">1</div>
+  <div class="test2">2</div>
+  <div class="test3">3</div>
+  <div class="test4">4</div>
+  <div class="test5">5</div>
+  <div class="test6">6</div>
+  <p>
+      我是大牛
+  </p>
+</body>
+</html>

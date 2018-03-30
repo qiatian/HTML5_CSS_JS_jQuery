@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>内置对象-document</title>
+    <script type="text/javascript">
+        //document内置对象的作用
+        //可以动态获取网页中所有的标签(节点)
+        //可以对获取到的标签进行CRUD：增删改查
+        document.write('hello,world');
+        document.write('<input type = "file"');
+        document.write('<img src = "">');
+
+        function changeImg() {
+            alert(0);
+            //获取网页中的图像标签
+            var img = document.getElementsByClassName('icon')[0];
+            //改变src属性
+            img.src = 'imgs/img_02.jpg';
+        }
+
+    </script>
+</head>
+<body>
+   <img class="icon" src="imgs/img_01.jpg">
+   <p></p>
+   <button onclick="changeImg();">更改图片</button>
+   <p></p>
+
+   <img class="icon1" src="imgs/img_01.jpg">
+   <p id="word">这里风景很美</p>
+   <p></p>
+   <button>隐藏</button>
+
+
+   <script>
+       //拿到所有的要操作的标签
+       var img = document.getElementsByClassName('icon1')[0];
+       var p = document.getElementById('word');
+       var btn = document.getElementsByTagName('button')[1];
+
+       console.log(btn);
+
+       //监听按钮的点击
+       btn.onclick = function () {
+           //隐藏 css属性style display
+           if (btn.innerText == '隐藏'){
+               p.style.display = 'none';
+               img.style.display = 'none';
+               btn.innerText = '显示';
+           }else {
+               p.style.display = 'block';//p块标签
+               img.style.display = 'inline-block';//行内块级标签
+               btn.innerText = '隐藏';
+           }
+
+       }
+   </script>
+
+
+</body>
+</html>

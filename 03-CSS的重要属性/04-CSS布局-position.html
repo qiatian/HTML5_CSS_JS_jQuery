@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <!--子绝父相-->
+    <style>
+        #main{
+            background-color: red;
+            margin: 60px;
+            width: 400px;
+            height:200px;
+
+            position: relative;
+        }
+        .test1{
+            background-color: blue;
+
+            position: absolute;
+
+            /*定位*/
+            /*left: 30px;*/
+            /*top:50px;*/
+            bottom: 0;
+            right: 0;
+
+        }
+        .test2{
+            background-color: orange;
+
+            /*停留在浏览器底部*/
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+     <div id="main">
+         <div class="test1">2121</div>
+     </div>
+     <div class="test2">相对浏览器定位</div>
+</body>
+</html>

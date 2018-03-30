@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>脱离标准流-float</title>
+    <!--任何一宗类型的标签一旦脱离标准流，就变为行内块级标签-->
+    <style>
+        #main{
+            width: 400px;
+            height: 200px;
+            background-color: red;
+
+        }
+        .test1{
+
+            background-color: green;
+
+            /*浮动---行内块级标签*/
+            float: left;
+            width: 80px;
+            height: 100px;
+        }
+        .test2{
+
+            background-color: cyan;
+        }
+    </style>
+</head>
+<body>
+
+     <div id="main">
+         <div class="test1">1</div>
+         <div class="test2">2</div>
+     </div>
+
+</body>
+</html>

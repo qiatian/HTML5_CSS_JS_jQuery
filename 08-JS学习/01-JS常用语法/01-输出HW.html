@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>输出Hello World，基本语法</title>
+    <script type="text/javascript">
+        <!--弹框输出-->
+        alert('Hello world!');
+//        调试输出
+        console.log("你好，世界")
+
+        //基本语法 字符串单引号，双引号都行，建议单引号
+        var age = 18; //number
+        var money = 100.08; //number
+        var name = 'jack'; //string
+            name2 = 'rose'; //string
+        var result = true; //boolean false
+        var number = null; //object
+        var number2 = undefined;//undefined
+        //如何输出变量
+        console.log(age,money,name,name2,result,number,number2);
+        //如何知道变量真实类型 typeof
+        console.log(typeof age,typeof money,typeof name,typeof name2,typeof result,typeof number,typeof number2);
+
+        //基本数据类型的运算 遵循规律：从左往右；任何类型的变量与string类型的变量拼接就会被强转为string
+        var newName = name + '-' + name2 + 'wangli';
+        console.log(newName);
+
+        //题目
+        var str1 = 10 + 10 + '10';//2010
+        var str2 = '10' + 10 + 10;//1020 101010
+        var str3 = (10 + '10') + 10;//101010
+        console.log(str1,str2,str3);
+
+        //数组
+        var numbers = [-10,'san',name,result,number,['hh',result]];
+        //遍历数组
+        for(var i=0;i<numbers.length;i++){
+
+            console.log(numbers[i]);
+        }
+
+        //JS中常用的属性 删除数组中的最后一个内容
+        numbers.pop();
+        numbers.push('llq');
+        for (var i in numbers){
+            console.log(i,numbers[i]);
+        }
+
+        //JS常用的类库 Math
+        var numsArr = [10,212,3223,32];
+        var maxNum = Math.max(120,23,34);
+//        var maxTest = Math.max(numsArr);
+        var newMaxNum = Math.max.apply(this,numsArr);
+        console.log(newMaxNum);
+
+        //JS中常见函数 加法运算 两个数
+        function sum(num1,num2) {
+            return num1+num2;
+        }
+        //调用函数
+        var resultNum = sum(23,34);
+        console.log(resultNum);
+
+        //万能加法函数
+        function sum2(numbers1) {
+            //变量
+            var result = 0;
+            for (var i in numbers1){
+                result += numbers[i];
+            }
+            //返回
+            return result;
+        }
+        var result2 = sum2(333,444,332,345);
+        console.log(result2);
+
+        //匿名函数 需要有变量接受
+        var res = function () {
+            console.log('我是匿名函数');
+        }
+        //调用匿名函数
+        res();
+
+        //JS中创建对象 this所在的函数属于哪个对象，this就代表这个对象
+        var dog = {
+            name:'ahua',
+            age:18,
+            height:1.33,
+            dogFriends:['lili','wangcai'],
+            eat:function (someThing) {
+                console.log(this.name + 'eat'+someThing);
+            },
+            run:function (someWhere) {
+                console.log(this.name + 'run'+someWhere);
+            }
+        };
+        console.log(typeof  dog);
+        //输出dog对象的属性和行为
+        console.log(dog.age,dog.name);
+        dog.eat('五花肉');
+        dog.run('操场');
+
+        //批量产生对象
+        //构造函数
+        var Dog = function () {
+            console.log('这是一个普通匿名函数');
+        }
+        //普通调用
+        Dog();
+
+        var dog1 = new Dog();
+        var dog2 = new Dog();
+        console.log(dog1,dog2);
+
+        //创建构造函数 抽象
+        var Cat = function () {
+            this.name =null;
+            this.age = null;
+            this.catFriends = [];
+            this.height = null;
+            this.eat = function (someThing) {
+                console.log(this.name + 'eat' + someThing);
+            }
+            this.run = function (someWhere) {
+                console.log(this.name + 'run' + someWhere);
+            }
+        }
+        //批量产生对象
+        var cat1 = new Cat();
+        cat1.name = 'abai';
+        cat1.age = 8;
+        cat1.catFriends = ['1122','3344'];
+        var cat2 = new  Cat();
+        cat2.name = 'ahua';
+
+        console.log(cat1,cat2);
+
+        var Pig = function (name,age,pigFriends,height) {
+            this.name =name;
+            this.age = age;
+            this.pigFriends = [];
+            this.height = height;
+            this.eat = function (someThing) {
+                console.log(this.name + 'eat' + someThing);
+            }
+            this.run = function (someWhere) {
+                console.log(this.name + 'run' + someWhere);
+            }
+        }
+        var pig = new Pig('aka',10,['we'],1.4);
+
+
+
+
+    </script>
+</head>
+<body>
+   <button onclick="alert('点了')">点我啊</button>
+
+</body>
+</html>

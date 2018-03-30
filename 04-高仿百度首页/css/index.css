@@ -1,0 +1,138 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+a{
+    /*设置颜色*/
+    color: black;
+}
+body{
+    background: url("../Imgs/bg.jpg");
+    /*设置背景尺寸，随窗口拉伸*/
+    background-size: cover;
+}
+/*头部*/
+#header{
+    background-color: rgba(0,0,0,0.2);
+    /*内容右对齐*/
+    text-align: right;
+    /*设置上下边距*/
+    margin: 15px 0;
+    /*设置高度*/
+    height: 35px;
+
+    /*设置行高*/
+    line-height: 35px;
+
+
+
+}
+#header a{
+    /*加粗*/
+    font-weight: bolder;
+    /*设置字体*/
+    font-family: 'sans-serif';
+    /*设置文字大小*/
+    font-size: 15px;
+    /*右外边距*/
+    margin-right: 8px;
+
+}
+#header a.no-weight{
+    font-weight: normal;
+}
+#header a.more-product{
+    background-color: #3388ff;
+    color: white;
+    /*去除下划线*/
+    text-decoration: none;
+    /*设置内边距*/
+    padding: 3px;
+}
+/*中间内容*/
+#content{
+    background-color: goldenrod;
+
+}
+#content .top-content{
+    /*居中*/
+    text-align: center;
+    margin: 10px;
+
+
+}
+#content .top-content img{
+    width:270px;
+    height: 129px;
+}
+.bottom-content{
+    background-color: green;
+    width: 600px;
+    height: 30px;
+    /*居中*/
+    margin: 0 auto 30px;
+}
+#content .bottom-content input{
+    width: 500px;
+    height: 100%;
+
+    box-sizing: border-box;
+    /*左内边距*/
+    padding-left: 10px;
+    font-size: 16px;
+}
+#content .bottom-content a{
+    background-color: gold;
+    color: white;
+    text-decoration: none;
+    width: 100px;
+    height: 38px;
+    /*行内块级标签 需要改变标签的类型*/
+    display: inline-block;
+
+    /*浮动*/
+    float: right;
+
+    /*水平居中和垂直居中*/
+    text-align: center;
+    line-height: 38px;
+
+}
+#content .bottom-content input:focus{
+    /*去除外边线*/
+    outline: none;
+    border: 1px solid #3388ff;
+}
+.quick-search{
+    text-align: center;
+    margin-bottom: 10px;
+}
+.quick-search img{
+    width: 101px;
+    height: 91px;
+    /*设置外边距*/
+    margin: 0 5px;
+}
+.quick-search img:hover{
+    /*设置不透明度*/
+    opacity: 0.5;
+}
+/*尾部*/
+#footer{
+    /*background-color: greenyellow;*/
+    /*处于底部*/
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    padding: 30px 0;
+
+    /*内容居中*/
+    text-align: center;
+}
+.top-footer{
+    margin-bottom: 5px;
+}
+#footer a{
+    margin: 0 5px;
+    color: darkgray;
+}

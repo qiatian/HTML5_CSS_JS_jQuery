@@ -1,0 +1,168 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+/*引入外部字体*/
+@font-face {
+    font-family: 'BebasNeue-webfont';
+    src: url('../fonts/BebasNeue-webfont.ttf');
+}
+a{
+    /*去除下划线*/
+    text-decoration: none;
+    color: orange;
+}
+body{
+    /*背景图*/
+    background: url("../imgs/tw.png") no-repeat;
+    font-family: BebasNeue-webfont;
+    margin-top: 50px;
+}
+#top{
+    position: fixed;
+    top: 0;
+    background: url("../imgs/pattern.png");
+    width: 100%;
+    padding-bottom: 30px;
+}
+/*头部*/
+#header{
+    background-color: red;
+    height: 3px;
+}
+/*导航*/
+#nav{
+    text-align: center;
+
+}
+#nav ul{
+    display: inline-block;
+}
+#nav ul li{
+    display: inline-block;
+}
+#nav ul li a{
+    /*改变标签类型*/
+    display: inline-block;
+    width: 200px;
+    height: 50px;
+
+    font-size: 25px;
+    /*内容垂直居中*/
+    line-height: 50px;
+    margin:0 8px;
+}
+#nav ul li a.selected,#nav ul li a:hover{
+    /*设置背景颜色*/
+    background-color: blanchedalmond;
+    color: black;
+}
+
+#list{
+    background-color: red;
+    /*上下间距*/
+    margin-top: 100px;
+    /*水平居中*/
+    text-align: center;
+
+}
+#list .love{
+
+    width: 382px;
+
+    /*块级标签 居中*/
+    /*margin: 0 auto;*/
+
+    /*改变标签类型*/
+    display: inline-block;
+
+    text-align: left;
+
+    /*设置外边距*/
+    margin: 20px;
+
+
+}
+#list .love a{
+    background-color: green;
+    display: inline-block;
+    width: 120px;
+    height: 35px;
+    font-size: 24px;
+
+    border-radius: 5px;
+
+    /*居中*/
+    text-align: center;
+    line-height: 35px;
+
+}
+#list .love a:hover{
+    background-color: black;
+}
+#list .love p{
+    font-family: sans-serif;
+    margin: 7px 0 0;
+    /*首行缩进*/
+    text-indent: 30px;
+}
+
+/*尾部*/
+#footer{
+    /*内容居中*/
+    text-align: center;
+}
+#footer h2{
+    color: darkslategray;
+    font-size: 35px;
+    margin: 8px 0;
+}
+#footer ul,#footer ul li{
+    display: inline-block;
+}
+#footer ul li img{
+    margin: 0 3px 10px;
+}
+
+#footer ul li img:hover{
+    /*设置不透明度*/
+    opacity: 0.7;
+}
+
+/*自适应布局*/
+@media screen and (max-width: 1095px){
+    #nav ul li a{
+
+        width: 150px;
+    }
+}
+@media screen and (max-width: 844px){
+    #nav ul li a{
+
+        width: 100px;
+        font-size: 25px;
+    }
+    #list{
+        margin-top: 50px;
+    }
+}
+@media screen and (max-width: 844px){
+    #nav ul li a{
+
+        width: 60px;
+        height: 30px;
+        line-height: 30px;
+        font-size: 15px;
+    }
+    #list{
+        margin-top: 30px;
+    }
+
+    #list .love{
+
+        width: 360px;
+    }
+    #list .love img{
+        width: 355px;
+    }
+}

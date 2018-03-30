@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<img class="icon1" src="imgs/img_01.jpg">
+<p id="word">这里风景很美</p>
+<p></p>
+<button>隐藏</button>
+
+
+<script>
+    //拿到所有的要操作的标签
+    var img = document.getElementsByClassName('icon1')[0];
+    var p = document.getElementById('word');
+    var btn = document.getElementsByTagName('button')[0];
+
+    console.log(btn);
+
+    //监听按钮的点击
+    btn.onclick = function () {
+        //隐藏 css属性style display
+        p.style.display = 'none';
+        img.style.display = 'none';
+        btn.innerText = '显示';
+    }
+</script>
+
+</body>
+</html>

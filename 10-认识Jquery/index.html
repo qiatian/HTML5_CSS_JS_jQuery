@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>认识jQuery</title>
+    <!--JS存在问题
+    浏览器兼容问题
+    存在复杂的dom操作
+    复杂的特效和动画
+    请求网络数据存在跨域问题
+
+    jQuery优势
+    几乎不存在浏览器兼容问题
+    轻松实现Dom操作 和 特效动画
+    多种方式的网络请求方案
+    -->
+</head>
+<body>
+      <div id="main">
+          <div class="word">
+              <p>我是一段文字</p>
+          </div>
+          <div class="pic">
+              <img src="imgs/img_01.jpg">
+          </div>
+      </div>
+
+      <button>显示</button>
+      <button>隐藏</button>
+      <button>切换</button>
+      <!--引用类库-->
+<script src="js/jquery-3.3.1.min.js"></script>
+<script>
+    <!--$()-->
+    //$()----->jquery对象
+    //拿到对应的标签 CSS选择器
+//    $('.word')
+//    $('#main>.word')
+//    $('#main .word')
+
+    console.log($('p'));
+
+    //查看拿到的标签中的属性
+    console.log($('.word').attr('class'));
+
+    //改变拿到标签中的属性值
+    $('img').attr('src','imgs/img_02.jpg');
+    $('img').attr({'src':'imgs/img_02.jpg'});
+
+    //如何查看标签中的内容
+    console.log($('p').text());
+    console.log($('p').html());
+
+    //改变
+    $('p').text('我是MT');
+
+    //事件
+//    显示
+    $('button').eq(0).on('click',function () {
+        $('p').show();
+        $('img').show();
+    });
+
+//    隐藏
+    $('button').eq(1).on('click',function () {
+        $('p').hide();
+        $('img').hide();
+    });
+
+//    切换
+    $('button').eq(2).on('click',function () {
+        $('p').toggle();
+        $('img').toggle();
+    });
+
+    //遍历
+    var datas = [10,23,3434,545,5445];
+    $.each(datas,function (index, value) {
+        console.log(index,value);
+    });
+
+    //取出对应下标
+    console.log($.inArray(23,datas));
+
+    //写css 没代码提示
+    $('.word').css({
+        background:'red'
+    });
+
+
+</script>
+</body>
+</html>

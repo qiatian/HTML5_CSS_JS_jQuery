@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>内置对象-window</title>
+    <script type="text/javascript">
+        //第一大作用
+        //所有全局的变量都是window的属性
+        //所有的全局函数都是window的方法
+        //全局变量
+        var age = 17;
+        console.log(age);
+        console.log(window.age);
+        //全局函数
+        function Dog() {
+            var name = 'zhangsan';
+            console.log('这是一条可爱的狗');
+//            console.log(window.name); //name是局部变量，不能用window调用
+            console.log(name);
+        }
+        Dog();
+        window.Dog();
+
+        alert('hh');
+        window.alert('hhhh');
+        window.console.log('全局的');
+
+        function Person() {
+            console.log(this);
+        }
+
+        Person(); //window
+        new Person(); //Person
+
+        //第二大作用  动态的跳转
+        window.location.href = 'http://www.baidu.com';
+        window.location.href = 'LLQ://openCamera?user=zhangsan';
+
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>
